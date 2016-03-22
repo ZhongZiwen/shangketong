@@ -91,6 +91,7 @@
 		9DCC8FC31CA1388800BEC4AB /* SKTCheckAccountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DCC8FC21CA1388800BEC4AB /* SKTCheckAccountManager.m */; };
 		9DCC8FC61CA138A400BEC4AB /* SKTCheckAccountService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DCC8FC51CA138A400BEC4AB /* SKTCheckAccountService.m */; };
 		9DCC8FCC1CA13E3D00BEC4AB /* NSObject+Expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DCC8FCB1CA13E3D00BEC4AB /* NSObject+Expanded.m */; };
+		9DCC8FCF1CA156B300BEC4AB /* SKTCaptchaHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DCC8FCE1CA156B300BEC4AB /* SKTCaptchaHelpViewController.m */; };
 		9DE8D9321C11EA8600B8C2B6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DE8D9311C11EA8600B8C2B6 /* Foundation.framework */; };
 		9DE8D9341C11EA8600B8C2B6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DE8D9331C11EA8600B8C2B6 /* CoreGraphics.framework */; };
 		9DE8D9361C11EA8600B8C2B6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DE8D9351C11EA8600B8C2B6 /* UIKit.framework */; };
@@ -253,6 +254,8 @@
 		9DCC8FC51CA138A400BEC4AB /* SKTCheckAccountService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTCheckAccountService.m; sourceTree = "<group>"; };
 		9DCC8FCA1CA13E3D00BEC4AB /* NSObject+Expanded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Expanded.h"; sourceTree = "<group>"; };
 		9DCC8FCB1CA13E3D00BEC4AB /* NSObject+Expanded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Expanded.m"; sourceTree = "<group>"; };
+		9DCC8FCD1CA156B300BEC4AB /* SKTCaptchaHelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTCaptchaHelpViewController.h; sourceTree = "<group>"; };
+		9DCC8FCE1CA156B300BEC4AB /* SKTCaptchaHelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTCaptchaHelpViewController.m; sourceTree = "<group>"; };
 		9DE8D92E1C11EA8600B8C2B6 /* shangketong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shangketong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DE8D9311C11EA8600B8C2B6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9DE8D9331C11EA8600B8C2B6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -486,6 +489,8 @@
 				9D30AB841C9A51E000D86943 /* SKTRegisterViewController.m */,
 				9D0974CE1C9FCDD800FFA75A /* SKTCompanyListViewController.h */,
 				9D0974CF1C9FCDD800FFA75A /* SKTCompanyListViewController.m */,
+				9DCC8FCD1CA156B300BEC4AB /* SKTCaptchaHelpViewController.h */,
+				9DCC8FCE1CA156B300BEC4AB /* SKTCaptchaHelpViewController.m */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -887,6 +892,7 @@
 				9DCC8FC61CA138A400BEC4AB /* SKTCheckAccountService.m in Sources */,
 				9D30AB111C96853C00D86943 /* SKTServiceFactory.m in Sources */,
 				9D4F53F41C8D57FC00741CBA /* SKTAppContext.m in Sources */,
+				9DCC8FCF1CA156B300BEC4AB /* SKTCaptchaHelpViewController.m in Sources */,
 				9D4F53FE1C8D7E1900741CBA /* SKTRequestGenerator.m in Sources */,
 				9D4F53F11C8D546E00741CBA /* SKTURLResponse.m in Sources */,
 				9D30AB401C98F92700D86943 /* SKTCRMViewController.m in Sources */,

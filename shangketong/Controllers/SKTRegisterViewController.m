@@ -13,6 +13,7 @@
 #import "SKTRegister.h"
 #import "SKTCaptchaManager.h"
 #import "SKTCheckAccountManager.h"
+#import "SKTCaptchaHelpViewController.h"
 
 @interface SKTRegisterViewController ()<UITableViewDataSource, UITableViewDelegate, SKTApiManagerApiCallBackDelegate, SKTApiManagerParamSourceDelegate, SKTApiManagerInterceptor>
 
@@ -145,7 +146,9 @@
 }
 
 - (void)helpButtonPress {
-    
+    SKTCaptchaHelpViewController *captchaHelpController = [[SKTCaptchaHelpViewController alloc] init];
+    captchaHelpController.title = @"未收到验证短信/邮件";
+    [self.navigationController pushViewController:captchaHelpController animated:YES];
 }
 
 #pragma mark - private method
