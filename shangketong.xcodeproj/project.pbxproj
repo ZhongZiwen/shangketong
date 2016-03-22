@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0703E67E1CA1B21B0031B788 /* SKTRegisterNewCompanyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0703E67D1CA1B21B0031B788 /* SKTRegisterNewCompanyViewController.m */; };
+		0703E6811CA1B2410031B788 /* SKTRegisterCompanyListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0703E6801CA1B2410031B788 /* SKTRegisterCompanyListViewController.m */; };
 		9D0974CD1C9FC7A300FFA75A /* SKTLoginReformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D0974CC1C9FC7A300FFA75A /* SKTLoginReformer.m */; };
 		9D0974D01C9FCDD800FFA75A /* SKTCompanyListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D0974CF1C9FCDD800FFA75A /* SKTCompanyListViewController.m */; };
 		9D0974D21C9FD17F00FFA75A /* tenant_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D0974D11C9FD17F00FFA75A /* tenant_icon@2x.png */; };
@@ -118,6 +120,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0703E67C1CA1B21B0031B788 /* SKTRegisterNewCompanyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTRegisterNewCompanyViewController.h; sourceTree = "<group>"; };
+		0703E67D1CA1B21B0031B788 /* SKTRegisterNewCompanyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTRegisterNewCompanyViewController.m; sourceTree = "<group>"; };
+		0703E67F1CA1B2410031B788 /* SKTRegisterCompanyListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTRegisterCompanyListViewController.h; sourceTree = "<group>"; };
+		0703E6801CA1B2410031B788 /* SKTRegisterCompanyListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTRegisterCompanyListViewController.m; sourceTree = "<group>"; };
 		4ED36600A810D514140332CA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		722ACE8E77F6F0AA3D24EC82 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		9D0974CB1C9FC7A300FFA75A /* SKTLoginReformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTLoginReformer.h; sourceTree = "<group>"; };
@@ -491,6 +497,10 @@
 				9D0974CF1C9FCDD800FFA75A /* SKTCompanyListViewController.m */,
 				9DCC8FCD1CA156B300BEC4AB /* SKTCaptchaHelpViewController.h */,
 				9DCC8FCE1CA156B300BEC4AB /* SKTCaptchaHelpViewController.m */,
+				0703E67C1CA1B21B0031B788 /* SKTRegisterNewCompanyViewController.h */,
+				0703E67D1CA1B21B0031B788 /* SKTRegisterNewCompanyViewController.m */,
+				0703E67F1CA1B2410031B788 /* SKTRegisterCompanyListViewController.h */,
+				0703E6801CA1B2410031B788 /* SKTRegisterCompanyListViewController.m */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -875,7 +885,9 @@
 				9D0974D51C9FD4CF00FFA75A /* SKTCompanyListCell.m in Sources */,
 				9D30ABB51C9C01FB00D86943 /* SKTLoginService.m in Sources */,
 				9DCC8FCC1CA13E3D00BEC4AB /* NSObject+Expanded.m in Sources */,
+				0703E67E1CA1B21B0031B788 /* SKTRegisterNewCompanyViewController.m in Sources */,
 				9D472AA01C7D9B4500C9E403 /* SKTPhotoZoomingImageView.m in Sources */,
+				0703E6811CA1B2410031B788 /* SKTRegisterCompanyListViewController.m in Sources */,
 				9D30AB461C98F96D00D86943 /* SKTMeViewController.m in Sources */,
 				9D30AB821C9A51C600D86943 /* SKTLoginViewController.m in Sources */,
 				9DCC8FB41CA0FB3A00BEC4AB /* SKTSelectCompanyService.m in Sources */,

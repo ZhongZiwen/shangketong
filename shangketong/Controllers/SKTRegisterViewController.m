@@ -13,6 +13,8 @@
 #import "SKTRegister.h"
 #import "SKTCaptchaManager.h"
 #import "SKTCheckAccountManager.h"
+#import "SKTRegisterNewCompanyViewController.h"
+#import "SKTRegisterCompanyListViewController.h"
 #import "SKTCaptchaHelpViewController.h"
 
 @interface SKTRegisterViewController ()<UITableViewDataSource, UITableViewDelegate, SKTApiManagerApiCallBackDelegate, SKTApiManagerParamSourceDelegate, SKTApiManagerInterceptor>
@@ -110,7 +112,16 @@
     
     [self.view endLoading];
     NSDictionary *rawData = [manager fetchDataWithReformer:nil];
-    NSLog(@"rawData = %@", rawData);
+    if (![rawData[@"result"] integerValue]) {  // 初始化,新建公司
+        SKTRegisterNewCompanyViewController *newCompanyController = [[SKTRegisterNewCompanyViewController alloc] init];
+        newCompanyController.title = @"初识设置";
+        [self.navigationController pushViewController:newCompanyController animated:YES];
+    }
+    else if ([rawData[@"result"] integerValue] == 2) {  // 注册账号已存在，显示公司列表
+        SKTRegisterCompanyListViewController *companyListController = [[SKTRegisterCompanyListViewController alloc] init];
+        companyListController.title = @"账号已存在";
+        [self.navigationController pushViewController:companyListController animated:YES];
+    }
 }
 
 - (void)managerCallApiDidFailed:(SKTApiBaseManager *)manager {
