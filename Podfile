@@ -1,0 +1,15 @@
+platform :ios, '7.0'
+inhibit_all_warnings!
+
+pod 'AFNetworking', '2.3.1'
+pod 'TTTAttributedLabelVodafone', '1.13.3.1'
+pod 'MBProgressHUD', '0.9.2'
+pod 'Masonry', '0.6.4'
+pod 'pop', '1.0.8'
+pod 'TPKeyboardAvoiding', '1.2.11'
+pod 'BlocksKit', '2.2.5'
+pod 'ODRefreshControl', '1.2'
+pod 'Reachability', '3.2'
+pod 'KVOController', '1.0.3'
+pod 'Mantle', '2.0.6'
+pod 'SDWebImage', '~> 3.7.5'
