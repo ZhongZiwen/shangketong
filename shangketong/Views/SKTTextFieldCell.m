@@ -144,6 +144,7 @@
 - (UIButton *)passwordButton {
     if (!_passwordButton) {
         _passwordButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _passwordButton.backgroundColor = [UIColor whiteColor];
         [_passwordButton setImage:[UIImage imageNamed:@"password_unlook"] forState:UIControlStateNormal];
         [_passwordButton addTarget:self action:@selector(passwordButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
     }

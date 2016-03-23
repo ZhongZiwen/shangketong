@@ -49,6 +49,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>ReactiveCocoa.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -64,6 +69,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>XLForm.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>pop.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -72,7 +82,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>10A0958B17EDCB586EB91DE3389CD56C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>2602F3D0DAC534568B6AD7EEA0DD1959</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2A0D9585A1EB7CF54EC8BDAB9F6818C4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3AE428402C75BC6F755E770550A3C8AD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -82,12 +107,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>4621B71B7A638CBC97D9AADCAF24CD80</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>53480ED0BE09FF49E34B1702D485CAAB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6B36349F1BB42D20D3D0368693F97F5B</key>
+		<key>9AAB1889E22BDC505F3684B3F76C8C7A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -97,7 +127,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A831E890F5D5C48F169AA77FCF9F35C5</key>
+		<key>A6FF7C7959051440B0E4D0CEC4C325EC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -107,27 +137,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C697ED627B3A7970E80DB9B3F31EF63D</key>
+		<key>AF0E70D497AB2D71E63163C968B99CAC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CBE13505CFB495E6AFCAE182AC320C9D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D19D6AA8D6038686307603ED4F3AD6B8</key>
+		<key>C9C282A7612C14955A64B477CD22CDCB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>DA1A7295DF2A99609DA0EEBF5E83233D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FBB6D56F10D51C0CFBC82F5BB9F689EB</key>
 		<dict>
 			<key>primary</key>
 			<true/>

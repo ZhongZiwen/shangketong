@@ -12,7 +12,7 @@
 
 @property (nonatomic, strong) UIImageView *headerImageView;
 @property (nonatomic, strong) UILabel *titleLabel;
-@property (nonatomic, strong) UIImageView *selectedStateImageView;
+@property (nonatomic, strong) UIImageView *accessoryImageView;
 @end
 
 @implementation SKTCompanyListCell
@@ -23,7 +23,7 @@
         
         [self.contentView addSubview:self.headerImageView];
         [self.contentView addSubview:self.titleLabel];
-        [self.contentView addSubview:self.selectedStateImageView];
+        [self.contentView addSubview:self.accessoryImageView];
         [_headerImageView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.size.mas_equalTo(CGSizeMake(30, 30));
             make.left.equalTo(self.contentView).offset(10);
@@ -35,10 +35,24 @@
             make.height.mas_equalTo(20);
             make.centerY.equalTo(self.contentView);
         }];
-        [_selectedStateImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.centerX.equalTo(self.contentView.mas_right).offset(-15);
-            make.centerY.equalTo(self.contentView);
-        }];
+        
+        if ([reuseIdentifier isEqualToString:kCellIdentifier_login]) {
+            [_accessoryImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+                UIImage *image = [UIImage imageNamed:@"quickSelect_gray"];
+                make.size.mas_equalTo(CGSizeMake(image.size.width, image.size.height));
+                make.centerX.equalTo(self.contentView.mas_right).offset(-15);
+                make.centerY.equalTo(self.contentView);
+            }];
+        }
+        else if ([reuseIdentifier isEqualToString:kCellIdentifier_register]) {
+            UIImage *image = [UIImage imageNamed:@"activity_Arrow"];
+            _accessoryImageView.image = image;
+            [_accessoryImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.size.mas_equalTo(CGSizeMake(image.size.width, image.size.height));
+                make.centerX.equalTo(self.contentView.mas_right).offset(-15);
+                make.centerY.equalTo(self.contentView);
+            }];
+        }
     }
     return self;
 }
@@ -58,18 +72,18 @@
     _titleLabel.text = name;
 }
 
-#pragma mark - getters and setters
-- (void)setIsSelected:(BOOL)isSelected {
-    _isSelected = isSelected;
+- (void)configForLoginWithCompanyName:(NSString *)name isSelected:(BOOL)isSelected {
+    _titleLabel.text = name;
     
-    if (_isSelected) {
-        _selectedStateImageView.image = [UIImage imageNamed:@"quickSelect_blue"];
+    if (isSelected) {
+        _accessoryImageView.image = [UIImage imageNamed:@"quickSelect_blue"];
     }
     else {
-        _selectedStateImageView.image = [UIImage imageNamed:@"quickSelect_gray"];
+        _accessoryImageView.image = [UIImage imageNamed:@"quickSelect_gray"];
     }
 }
 
+#pragma mark - getters and setters
 - (UIImageView *)headerImageView {
     if (!_headerImageView) {
         _headerImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tenant_icon"]];
@@ -88,12 +102,11 @@
     return _titleLabel;
 }
 
-- (UIImageView *)selectedStateImageView {
-    if (!_selectedStateImageView) {
-        UIImage *image = [UIImage imageNamed:@"quickSelect_gray"];
-        _selectedStateImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, image.size.width, image.size.height)];
+- (UIImageView *)accessoryImageView {
+    if (!_accessoryImageView) {
+        _accessoryImageView = [[UIImageView alloc] init];
     }
-    return _selectedStateImageView;
+    return _accessoryImageView;
 }
 
 @end

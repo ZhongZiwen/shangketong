@@ -18,3 +18,5 @@
 #define kNetPath_SendCaptcha @"user/sendCaptcha.do"
 // 注册，提交账户和验证码
 #define kNetPath_CheckAccountName @"user/validate/checkAccountName.do"
+// 注册，提交账户和密码
+#define kNetPath_CheckAccountPassword @"user/checkAccountPassword.do"

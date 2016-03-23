@@ -25,6 +25,7 @@ extern NSString * const kSKTServiceLogin;
 extern NSString * const kSKTServiceSelectCompany;
 extern NSString * const kSKTServiceCaptcha;
 extern NSString * const kSKTServiceCheckAccount;
+extern NSString * const kSKTServiceCheckAccountLogin;
 
 
 #endif /* SKTNetworkingConfiguration_h */

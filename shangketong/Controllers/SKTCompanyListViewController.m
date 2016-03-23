@@ -50,17 +50,15 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    SKTCompanyListCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellIdentifier forIndexPath:indexPath];
+    SKTCompanyListCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellIdentifier_login forIndexPath:indexPath];
     
     NSDictionary *tempDict = _tenantsArray[indexPath.row];
     
-    [cell configWithCompanyName:tempDict[@"name"]];
-    
     if (indexPath.row == _selecedIndex) {
-        cell.isSelected = YES;
+        [cell configForLoginWithCompanyName:tempDict[@"name"] isSelected:YES];
     }
     else {
-        cell.isSelected = NO;
+        [cell configForLoginWithCompanyName:tempDict[@"name"] isSelected:NO];
     }
     
     [tableView addLineforPlainCell:cell forRowAtIndexPath:indexPath withLeftSpace:10.0f];
@@ -171,7 +169,7 @@
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-        [_tableView registerClass:[SKTCompanyListCell class] forCellReuseIdentifier:kCellIdentifier];
+        [_tableView registerClass:[SKTCompanyListCell class] forCellReuseIdentifier:kCellIdentifier_login];
     }
     return _tableView;
 }

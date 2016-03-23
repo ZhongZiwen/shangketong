@@ -142,6 +142,10 @@
     if ([response.request.URL isEqual:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@/%@/%@", kApiBaseUrl, kApiPort, kApiProjectName, kNetPath_SendCaptcha]]]) {
         self.fetchedRawData = [response.contentString copy];
     }
+    // 新建公司前登录，验证账号密码
+    else if ([response.request.URL isEqual:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@/%@/%@", kApiBaseUrl, kApiPort, kApiProjectName, kNetPath_CheckAccountPassword]]]) {
+        self.fetchedRawData = [response.contentString copy];
+    }
     else if (response.content) {
         self.fetchedRawData = [response.content copy];
     }

@@ -18,8 +18,12 @@
 #import "UIColor+expanded.h"
 #import "UIImage+Expanded.h"
 #import "UIView+Expanded.h"
+#import "NSString+Expanded.h"
+#import "UIButton+Bootstrap.h"
 
 #import <Masonry.h>
+#import <ReactiveCocoa/ReactiveCocoa.h>
+#import <ReactiveCocoa/RACEXTScope.h>
 
 #endif
 
@@ -43,8 +47,12 @@
 #define kLoginPaddingLeftWidth 18.0
 
 #define kShowHUD(_s_, ...) MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:kKeyWindow animated:YES];hud.mode = MBProgressHUDModeText;hud.detailsLabelFont = [UIFont boldSystemFontOfSize:15.0];hud.detailsLabelFont = [NSString stringWithFormat:(_s_), ##__VA_ARGS__];hud.margin = 10.f;hud.removeFromSuperViewOnHide = YES;[hud hide:YES afterDelay:1.0];
+#define kTipAlert(_S_, ...) [[[UIAlertView alloc] initWithTitle:@"提示" message:[NSString stringWithFormat:(_S_), ##__VA_ARGS__] delegate:nil cancelButtonTitle:@"知道了" otherButtonTitles:nil] show]
 
 
+// 超链接颜色
+#define kLinkAttributes     @{(__bridge NSString *)kCTUnderlineStyleAttributeName : [NSNumber numberWithBool:NO],(NSString *)kCTForegroundColorAttributeName : (__bridge id)[UIColor colorWithHexString:@"0x10aeff"].CGColor}
+#define kLinkAttributesActive       @{(NSString *)kCTUnderlineStyleAttributeName : [NSNumber numberWithBool:NO],(NSString *)kCTForegroundColorAttributeName : (__bridge id)[[UIColor colorWithHexString:@"0x10a1ff"] CGColor]}
 
 
 

@@ -13,11 +13,11 @@
             buildForProfiling = "YES"
             buildForArchiving = "YES">
             <BuildableReference
-               BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '7C27EC17AA41AE99A4178F06'
-               BlueprintName = 'TTTAttributedLabelVodafone'
-               ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libTTTAttributedLabelVodafone.a'>
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "2A0D9585A1EB7CF54EC8BDAB9F6818C4"
+               BlueprintName = "TTTAttributedLabelVodafone"
+               ReferencedContainer = "container:Pods.xcodeproj"
+               BuildableName = "libTTTAttributedLabelVodafone.a">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

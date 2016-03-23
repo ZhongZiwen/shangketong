@@ -18,6 +18,7 @@
 @interface SKTLoginViewController ()<UITableViewDataSource, UITableViewDelegate, SKTApiManagerApiCallBackDelegate, SKTApiManagerParamSourceDelegate, SKTApiManagerInterceptor>
 
 @property (nonatomic, strong) TPKeyboardAvoidingTableView *tableView;
+@property (nonatomic, strong) UIButton *loginButton;
 @property (nonatomic, strong) SKTLoginManager *loginManager;
 @property (nonatomic, strong) SKTLogin *login;
 @property (nonatomic, strong) SKTLoginReformer *loginReformer;
@@ -31,6 +32,8 @@
     
     self.view.backgroundColor = kBackgroundColor;
     
+    _login = [[SKTLogin alloc] init];
+
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(backButtonPress)];
     self.navigationItem.leftBarButtonItem = backButton;
     
@@ -41,8 +44,6 @@
     
     _tableView.tableHeaderView = [self customizeHeaderView];
     _tableView.tableFooterView = [self customizeFooterView];
-    
-    _login = [[SKTLogin alloc] init];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -145,20 +146,9 @@
 - (UIView *)customizeFooterView {
     UIView *footerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreen_Width, 150)];
     
-    UIButton *loginButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    loginButton.backgroundColor = [UIColor colorWithHexString:@"0x3bbc79"];
-    loginButton.titleLabel.font = [UIFont systemFontOfSize:17];
-    [loginButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [loginButton setTitle:@"登录" forState:UIControlStateNormal];
-    loginButton.layer.cornerRadius = 45 / 2;
-    loginButton.layer.masksToBounds = YES;
-    [loginButton addTarget:self action:@selector(loginButtonPress) forControlEvents:UIControlEventTouchUpInside];
-    [footerView addSubview:loginButton];
-    
-    [loginButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.size.mas_equalTo(CGSizeMake(kScreen_Width - 2 * 20, 45));
-        make.top.equalTo(footerView).offset(20);
-        make.centerX.equalTo(footerView);
+    [footerView addSubview:self.loginButton];
+    RAC(self.loginButton, enabled) = [RACSignal combineLatest:@[RACObserve(self.login, userName), RACObserve(self.login, password)] reduce:^id(NSString *userName, NSString *password) {
+        return @((userName && userName.length > 0) && (password && password.length > 0));
     }];
     
     // 忘记密码
@@ -171,7 +161,7 @@
     [findPsdButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.mas_equalTo(CGSizeMake(100, 30));
         make.centerX.equalTo(footerView);
-        make.top.equalTo(loginButton.mas_bottom).offset(20);
+        make.top.equalTo(_loginButton.mas_bottom).offset(20);
     }];
     
     return footerView;
@@ -188,6 +178,13 @@
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     }
     return _tableView;
+}
+
+- (UIButton *)loginButton {
+    if (!_loginButton) {
+        _loginButton = [UIButton buttonWithStyle:StrapSuccessStyle andTitle:@"登录" andFrame:CGRectMake(20, 20, kScreen_Width - 2 * 20, 45) target:self action:@selector(loginButtonPress)];
+    }
+    return _loginButton;
 }
 
 - (SKTLoginManager *)loginManager {

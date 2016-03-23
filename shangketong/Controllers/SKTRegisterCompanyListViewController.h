@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class SKTRegister;
+
 @interface SKTRegisterCompanyListViewController : UIViewController
 
+@property (nonatomic, copy) NSArray *companyListArray;
+@property (nonatomic, strong) SKTRegister *mRegister;
 @end

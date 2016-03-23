@@ -44,11 +44,19 @@ PODS:
   - ODRefreshControl (1.2)
   - pop (1.0.8)
   - Reachability (3.2)
+  - ReactiveCocoa (2.3.1):
+    - ReactiveCocoa/UI (= 2.3.1)
+  - ReactiveCocoa/Core (2.3.1):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.3.1)
+  - ReactiveCocoa/UI (2.3.1):
+    - ReactiveCocoa/Core
   - SDWebImage (3.7.5):
     - SDWebImage/Core (= 3.7.5)
   - SDWebImage/Core (3.7.5)
   - TPKeyboardAvoiding (1.2.11)
   - TTTAttributedLabelVodafone (1.13.3.1)
+  - XLForm (3.1.1)
 
 DEPENDENCIES:
   - AFNetworking (= 2.3.1)
@@ -60,9 +68,11 @@ DEPENDENCIES:
   - ODRefreshControl (= 1.2)
   - pop (= 1.0.8)
   - Reachability (= 3.2)
+  - ReactiveCocoa (= 2.3.1)
   - SDWebImage (~> 3.7.5)
   - TPKeyboardAvoiding (= 1.2.11)
   - TTTAttributedLabelVodafone (= 1.13.3.1)
+  - XLForm (= 3.1.1)
 
 SPEC CHECKSUMS:
   AFNetworking: 05b9f6e3aa5ac45bc383b4bb108ef338080a26c7
@@ -74,8 +84,10 @@ SPEC CHECKSUMS:
   ODRefreshControl: 907e6149d72dde488d5917ccfabee5bd8d711a20
   pop: bb773ae2c791ca2629de13b347e7a8b450fa6a57
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
+  ReactiveCocoa: 3fe9b233ca6db810e86681b5749488564c1179a1
   SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
   TPKeyboardAvoiding: e5ce146b313de063957bfa75a13f1e9b0ff18ab7
   TTTAttributedLabelVodafone: 6f06ab97d41be816a0cf9994d84fa4e99a962d07
+  XLForm: c9ee7e0f859341279bfd894f9589a9d25c23e4df
 
 COCOAPODS: 0.39.0

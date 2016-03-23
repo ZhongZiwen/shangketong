@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-#define kCellIdentifier @"SKTCompanyListCell"
+#define kCellIdentifier_login @"SKTCompanyListCell_Login"
+#define kCellIdentifier_register @"SKTCompanyListCell_Register"
 
 @interface SKTCompanyListCell : UITableViewCell
 
-@property (nonatomic, assign) BOOL isSelected;
-
 - (void)configWithCompanyName:(NSString *)name;
+- (void)configForLoginWithCompanyName:(NSString *)name isSelected:(BOOL)isSelected;
 @end

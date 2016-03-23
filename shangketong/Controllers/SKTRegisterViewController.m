@@ -20,6 +20,7 @@
 @interface SKTRegisterViewController ()<UITableViewDataSource, UITableViewDelegate, SKTApiManagerApiCallBackDelegate, SKTApiManagerParamSourceDelegate, SKTApiManagerInterceptor>
 
 @property (nonatomic, strong) TPKeyboardAvoidingTableView *tableView;
+@property (nonatomic, strong) UIButton *commitButton;
 @property (nonatomic, strong) SKTRegister *mRegister;
 @property (nonatomic, strong) SKTCaptchaManager *captchaManager;
 @property (nonatomic, strong) SKTCheckAccountManager *checkAccountManager;
@@ -120,6 +121,8 @@
     else if ([rawData[@"result"] integerValue] == 2) {  // 注册账号已存在，显示公司列表
         SKTRegisterCompanyListViewController *companyListController = [[SKTRegisterCompanyListViewController alloc] init];
         companyListController.title = @"账号已存在";
+        companyListController.mRegister = _mRegister;
+        companyListController.companyListArray = [rawData[@"companyList"] copy];
         [self.navigationController pushViewController:companyListController animated:YES];
     }
 }
@@ -152,6 +155,7 @@
 }
 
 - (void)commitButtonPress {
+    [self.view endEditing:YES];
     [self.view beginLoading];
     [self.checkAccountManager loadData];
 }
@@ -182,21 +186,10 @@
 - (UIView *)customizeFooterView {
     
     UIView *footerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreen_Width, 150)];
-    
-    UIButton *commitButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    commitButton.backgroundColor = [UIColor colorWithHexString:@"0x3bbc79"];
-    commitButton.titleLabel.font = [UIFont systemFontOfSize:17];
-    [commitButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [commitButton setTitle:@"提交" forState:UIControlStateNormal];
-    commitButton.layer.cornerRadius = 45 / 2;
-    commitButton.layer.masksToBounds = YES;
-    [commitButton addTarget:self action:@selector(commitButtonPress) forControlEvents:UIControlEventTouchUpInside];
-    [footerView addSubview:commitButton];
-    
-    [commitButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.size.mas_equalTo(CGSizeMake(kScreen_Width - 2 * 20, 45));
-        make.top.equalTo(footerView).offset(20);
-        make.centerX.equalTo(footerView);
+
+    [footerView addSubview:self.commitButton];
+    RAC(self.commitButton, enabled) = [RACSignal combineLatest:@[RACObserve(self.mRegister, accountString), RACObserve(self.mRegister, captchaString)] reduce:^id(NSString *accountString, NSString *captchaString) {
+        return @((accountString && accountString.length > 0) && (captchaString && captchaString.length > 0));
     }];
     
     return footerView;
@@ -235,6 +228,13 @@
         [_tableView registerClass:[SKTTextFieldCell class] forCellReuseIdentifier:kCellIdentifier_captcha];
     }
     return _tableView;
+}
+
+- (UIButton *)commitButton {
+    if (!_commitButton) {
+        _commitButton = [UIButton buttonWithStyle:StrapSuccessStyle andTitle:@"提交" andFrame:CGRectMake(20, 20, kScreen_Width - 2 * 20, 45) target:self action:@selector(commitButtonPress)];
+    }
+    return _commitButton;
 }
 
 - (SKTRegister *)mRegister {
