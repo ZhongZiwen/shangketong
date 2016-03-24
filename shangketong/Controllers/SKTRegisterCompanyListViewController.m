@@ -108,10 +108,11 @@
         if (![rawData integerValue]) {
             SKTRegisterNewCompanyViewController *newCompanyViewController = [[SKTRegisterNewCompanyViewController alloc] init];
             newCompanyViewController.title = @"创建公司";
+            newCompanyViewController.aRegister = _mRegister;
             [self.navigationController pushViewController:newCompanyViewController animated:YES];
         }
         else {  // 登录失败
-            
+            [NSObject showHudTipStr:@"登录失败,请重试!"];
         }
     }
 }
@@ -129,7 +130,8 @@
                  @"password" : _mRegister.password};
     }
     else if (manager == self.checkAccountLoginManager) {
-        return @{@"password" : _mRegister.checkAccountLoginPassword};
+        return @{@"accountName" : _mRegister.accountString,
+                 @"password" : _mRegister.checkAccountLoginPassword};
     }
 
     return nil;

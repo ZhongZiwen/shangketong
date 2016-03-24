@@ -13,6 +13,12 @@
 #define kApiPort @""
 #define kApiProjectName @"user"
 
+//#define kApiBaseUrl @"http://192.168.4.151"
+//#define kApiPort @":9080"
+//#define kApiProjectName @"user"
+
+
+
 typedef NS_ENUM(NSUInteger, SKTURLResponseStatus) {
     SKTURLResponseStatusSuccess,    // 作为底层，请求是否成功只考虑是否成功接收到服务器反馈。至于签名是否正确，返回的数据数据是否完整，由上层的SKTApiBaseManager来决定。
     SKTURLResponseStatusErrorTimeout,
@@ -26,6 +32,7 @@ extern NSString * const kSKTServiceSelectCompany;
 extern NSString * const kSKTServiceCaptcha;
 extern NSString * const kSKTServiceCheckAccount;
 extern NSString * const kSKTServiceCheckAccountLogin;
+extern NSString * const kSKTServiceRegisterCompany;
 
 
 #endif /* SKTNetworkingConfiguration_h */

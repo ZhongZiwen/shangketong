@@ -24,7 +24,6 @@
 		9D30AB371C98F7FA00D86943 /* SKTBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D30AB361C98F7FA00D86943 /* SKTBaseViewController.m */; };
 		9D30AB3A1C98F90400D86943 /* SKTHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D30AB391C98F90400D86943 /* SKTHomeViewController.m */; };
 		9D30AB3D1C98F91D00D86943 /* SKTMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D30AB3C1C98F91D00D86943 /* SKTMessageViewController.m */; };
-		9D30AB401C98F92700D86943 /* SKTCRMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D30AB3F1C98F92700D86943 /* SKTCRMViewController.m */; };
 		9D30AB431C98F95F00D86943 /* SKTOfficeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D30AB421C98F95F00D86943 /* SKTOfficeViewController.m */; };
 		9D30AB461C98F96D00D86943 /* SKTMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D30AB451C98F96D00D86943 /* SKTMeViewController.m */; };
 		9D30AB491C99048600D86943 /* tabbar_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D30AB481C99048600D86943 /* tabbar_background@2x.png */; };
@@ -121,6 +120,25 @@
 		9DCC90171CA28E1F00BEC4AB /* UIButton+Bootstrap.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DCC90161CA28E1F00BEC4AB /* UIButton+Bootstrap.m */; };
 		9DCC901A1CA2A9CA00BEC4AB /* SKTCheckAccountLoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DCC90191CA2A9CA00BEC4AB /* SKTCheckAccountLoginManager.m */; };
 		9DCC901D1CA2AA5100BEC4AB /* SKTCheckAccountLoginService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DCC901C1CA2AA5100BEC4AB /* SKTCheckAccountLoginService.m */; };
+		9DCC90201CA3BC9F00BEC4AB /* SKTRegisterCompanyService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DCC901F1CA3BC9F00BEC4AB /* SKTRegisterCompanyService.m */; };
+		9DCC90231CA3BCBC00BEC4AB /* SKTRegisterCompanyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DCC90221CA3BCBC00BEC4AB /* SKTRegisterCompanyManager.m */; };
+		9DCC90351CA3EC8200BEC4AB /* menu_item_account@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DCC90251CA3EC8200BEC4AB /* menu_item_account@2x.png */; };
+		9DCC90361CA3EC8200BEC4AB /* menu_item_account@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DCC90261CA3EC8200BEC4AB /* menu_item_account@3x.png */; };
+		9DCC90371CA3EC8200BEC4AB /* menu_item_campaign@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DCC90271CA3EC8200BEC4AB /* menu_item_campaign@2x.png */; };
+		9DCC90381CA3EC8200BEC4AB /* menu_item_campaign@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DCC90281CA3EC8200BEC4AB /* menu_item_campaign@3x.png */; };
+		9DCC90391CA3EC8200BEC4AB /* menu_item_contact@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DCC90291CA3EC8200BEC4AB /* menu_item_contact@2x.png */; };
+		9DCC903A1CA3EC8200BEC4AB /* menu_item_contact@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DCC902A1CA3EC8200BEC4AB /* menu_item_contact@3x.png */; };
+		9DCC903B1CA3EC8200BEC4AB /* menu_item_highsea@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DCC902B1CA3EC8200BEC4AB /* menu_item_highsea@2x.png */; };
+		9DCC903C1CA3EC8200BEC4AB /* menu_item_highsea@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DCC902C1CA3EC8200BEC4AB /* menu_item_highsea@3x.png */; };
+		9DCC903D1CA3EC8200BEC4AB /* menu_item_lead@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DCC902D1CA3EC8200BEC4AB /* menu_item_lead@2x.png */; };
+		9DCC903E1CA3EC8200BEC4AB /* menu_item_lead@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DCC902E1CA3EC8200BEC4AB /* menu_item_lead@3x.png */; };
+		9DCC903F1CA3EC8200BEC4AB /* menu_item_leadHighsea@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DCC902F1CA3EC8200BEC4AB /* menu_item_leadHighsea@2x.png */; };
+		9DCC90401CA3EC8200BEC4AB /* menu_item_leadHighsea@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DCC90301CA3EC8200BEC4AB /* menu_item_leadHighsea@3x.png */; };
+		9DCC90411CA3EC8200BEC4AB /* menu_item_opportunity@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DCC90311CA3EC8200BEC4AB /* menu_item_opportunity@2x.png */; };
+		9DCC90421CA3EC8200BEC4AB /* menu_item_opportunity@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DCC90321CA3EC8200BEC4AB /* menu_item_opportunity@3x.png */; };
+		9DCC90431CA3EC8200BEC4AB /* menu_item_product@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DCC90331CA3EC8200BEC4AB /* menu_item_product@2x.png */; };
+		9DCC90441CA3EC8200BEC4AB /* menu_item_product@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DCC90341CA3EC8200BEC4AB /* menu_item_product@3x.png */; };
+		9DCC90471CA3F34300BEC4AB /* SKTCRMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DCC90461CA3F34300BEC4AB /* SKTCRMViewController.m */; };
 		9DE8D9321C11EA8600B8C2B6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DE8D9311C11EA8600B8C2B6 /* Foundation.framework */; };
 		9DE8D9341C11EA8600B8C2B6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DE8D9331C11EA8600B8C2B6 /* CoreGraphics.framework */; };
 		9DE8D9361C11EA8600B8C2B6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DE8D9351C11EA8600B8C2B6 /* UIKit.framework */; };
@@ -182,8 +200,6 @@
 		9D30AB391C98F90400D86943 /* SKTHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTHomeViewController.m; sourceTree = "<group>"; };
 		9D30AB3B1C98F91D00D86943 /* SKTMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTMessageViewController.h; sourceTree = "<group>"; };
 		9D30AB3C1C98F91D00D86943 /* SKTMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTMessageViewController.m; sourceTree = "<group>"; };
-		9D30AB3E1C98F92700D86943 /* SKTCRMViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTCRMViewController.h; sourceTree = "<group>"; };
-		9D30AB3F1C98F92700D86943 /* SKTCRMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTCRMViewController.m; sourceTree = "<group>"; };
 		9D30AB411C98F95F00D86943 /* SKTOfficeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTOfficeViewController.h; sourceTree = "<group>"; };
 		9D30AB421C98F95F00D86943 /* SKTOfficeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTOfficeViewController.m; sourceTree = "<group>"; };
 		9D30AB441C98F96D00D86943 /* SKTMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTMeViewController.h; sourceTree = "<group>"; };
@@ -330,6 +346,28 @@
 		9DCC90191CA2A9CA00BEC4AB /* SKTCheckAccountLoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTCheckAccountLoginManager.m; sourceTree = "<group>"; };
 		9DCC901B1CA2AA5100BEC4AB /* SKTCheckAccountLoginService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTCheckAccountLoginService.h; sourceTree = "<group>"; };
 		9DCC901C1CA2AA5100BEC4AB /* SKTCheckAccountLoginService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTCheckAccountLoginService.m; sourceTree = "<group>"; };
+		9DCC901E1CA3BC9F00BEC4AB /* SKTRegisterCompanyService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTRegisterCompanyService.h; sourceTree = "<group>"; };
+		9DCC901F1CA3BC9F00BEC4AB /* SKTRegisterCompanyService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTRegisterCompanyService.m; sourceTree = "<group>"; };
+		9DCC90211CA3BCBC00BEC4AB /* SKTRegisterCompanyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTRegisterCompanyManager.h; sourceTree = "<group>"; };
+		9DCC90221CA3BCBC00BEC4AB /* SKTRegisterCompanyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTRegisterCompanyManager.m; sourceTree = "<group>"; };
+		9DCC90251CA3EC8200BEC4AB /* menu_item_account@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu_item_account@2x.png"; sourceTree = "<group>"; };
+		9DCC90261CA3EC8200BEC4AB /* menu_item_account@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu_item_account@3x.png"; sourceTree = "<group>"; };
+		9DCC90271CA3EC8200BEC4AB /* menu_item_campaign@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu_item_campaign@2x.png"; sourceTree = "<group>"; };
+		9DCC90281CA3EC8200BEC4AB /* menu_item_campaign@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu_item_campaign@3x.png"; sourceTree = "<group>"; };
+		9DCC90291CA3EC8200BEC4AB /* menu_item_contact@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu_item_contact@2x.png"; sourceTree = "<group>"; };
+		9DCC902A1CA3EC8200BEC4AB /* menu_item_contact@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu_item_contact@3x.png"; sourceTree = "<group>"; };
+		9DCC902B1CA3EC8200BEC4AB /* menu_item_highsea@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu_item_highsea@2x.png"; sourceTree = "<group>"; };
+		9DCC902C1CA3EC8200BEC4AB /* menu_item_highsea@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu_item_highsea@3x.png"; sourceTree = "<group>"; };
+		9DCC902D1CA3EC8200BEC4AB /* menu_item_lead@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu_item_lead@2x.png"; sourceTree = "<group>"; };
+		9DCC902E1CA3EC8200BEC4AB /* menu_item_lead@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu_item_lead@3x.png"; sourceTree = "<group>"; };
+		9DCC902F1CA3EC8200BEC4AB /* menu_item_leadHighsea@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu_item_leadHighsea@2x.png"; sourceTree = "<group>"; };
+		9DCC90301CA3EC8200BEC4AB /* menu_item_leadHighsea@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu_item_leadHighsea@3x.png"; sourceTree = "<group>"; };
+		9DCC90311CA3EC8200BEC4AB /* menu_item_opportunity@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu_item_opportunity@2x.png"; sourceTree = "<group>"; };
+		9DCC90321CA3EC8200BEC4AB /* menu_item_opportunity@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu_item_opportunity@3x.png"; sourceTree = "<group>"; };
+		9DCC90331CA3EC8200BEC4AB /* menu_item_product@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu_item_product@2x.png"; sourceTree = "<group>"; };
+		9DCC90341CA3EC8200BEC4AB /* menu_item_product@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu_item_product@3x.png"; sourceTree = "<group>"; };
+		9DCC90451CA3F34300BEC4AB /* SKTCRMViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTCRMViewController.h; sourceTree = "<group>"; };
+		9DCC90461CA3F34300BEC4AB /* SKTCRMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTCRMViewController.m; sourceTree = "<group>"; };
 		9DE8D92E1C11EA8600B8C2B6 /* shangketong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shangketong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DE8D9311C11EA8600B8C2B6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9DE8D9331C11EA8600B8C2B6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -485,8 +523,8 @@
 				9D30AB391C98F90400D86943 /* SKTHomeViewController.m */,
 				9D30AB3B1C98F91D00D86943 /* SKTMessageViewController.h */,
 				9D30AB3C1C98F91D00D86943 /* SKTMessageViewController.m */,
-				9D30AB3E1C98F92700D86943 /* SKTCRMViewController.h */,
-				9D30AB3F1C98F92700D86943 /* SKTCRMViewController.m */,
+				9DCC90451CA3F34300BEC4AB /* SKTCRMViewController.h */,
+				9DCC90461CA3F34300BEC4AB /* SKTCRMViewController.m */,
 				9D30AB411C98F95F00D86943 /* SKTOfficeViewController.h */,
 				9D30AB421C98F95F00D86943 /* SKTOfficeViewController.m */,
 				9D30AB441C98F96D00D86943 /* SKTMeViewController.h */,
@@ -517,6 +555,7 @@
 				9DCC8FD11CA23D6900BEC4AB /* activity_Arrow@2x.png */,
 				9DCC8FAB1CA0E80700BEC4AB /* quickSelect_blue@2x.png */,
 				9DCC8FAC1CA0E80700BEC4AB /* quickSelect_gray@2x.png */,
+				9DCC90241CA3EBCF00BEC4AB /* menu */,
 				9D30ABA31C9BC6EB00D86943 /* login */,
 				9D30AB8E1C9AAA6B00D86943 /* user */,
 				9D30AB731C9955A000D86943 /* introduction */,
@@ -655,6 +694,8 @@
 				9DCC8FC21CA1388800BEC4AB /* SKTCheckAccountManager.m */,
 				9DCC90181CA2A9CA00BEC4AB /* SKTCheckAccountLoginManager.h */,
 				9DCC90191CA2A9CA00BEC4AB /* SKTCheckAccountLoginManager.m */,
+				9DCC90211CA3BCBC00BEC4AB /* SKTRegisterCompanyManager.h */,
+				9DCC90221CA3BCBC00BEC4AB /* SKTRegisterCompanyManager.m */,
 			);
 			name = ApiManager;
 			sourceTree = "<group>";
@@ -672,6 +713,8 @@
 				9DCC8FC51CA138A400BEC4AB /* SKTCheckAccountService.m */,
 				9DCC901B1CA2AA5100BEC4AB /* SKTCheckAccountLoginService.h */,
 				9DCC901C1CA2AA5100BEC4AB /* SKTCheckAccountLoginService.m */,
+				9DCC901E1CA3BC9F00BEC4AB /* SKTRegisterCompanyService.h */,
+				9DCC901F1CA3BC9F00BEC4AB /* SKTRegisterCompanyService.m */,
 			);
 			name = ApiService;
 			sourceTree = "<group>";
@@ -746,6 +789,29 @@
 				9DCC8FF91CA26B2100BEC4AB /* SVWebViewControllerActivitySafari@2x.png */,
 			);
 			path = Safari;
+			sourceTree = "<group>";
+		};
+		9DCC90241CA3EBCF00BEC4AB /* menu */ = {
+			isa = PBXGroup;
+			children = (
+				9DCC90271CA3EC8200BEC4AB /* menu_item_campaign@2x.png */,
+				9DCC90281CA3EC8200BEC4AB /* menu_item_campaign@3x.png */,
+				9DCC902F1CA3EC8200BEC4AB /* menu_item_leadHighsea@2x.png */,
+				9DCC90301CA3EC8200BEC4AB /* menu_item_leadHighsea@3x.png */,
+				9DCC902D1CA3EC8200BEC4AB /* menu_item_lead@2x.png */,
+				9DCC902E1CA3EC8200BEC4AB /* menu_item_lead@3x.png */,
+				9DCC902B1CA3EC8200BEC4AB /* menu_item_highsea@2x.png */,
+				9DCC902C1CA3EC8200BEC4AB /* menu_item_highsea@3x.png */,
+				9DCC90251CA3EC8200BEC4AB /* menu_item_account@2x.png */,
+				9DCC90261CA3EC8200BEC4AB /* menu_item_account@3x.png */,
+				9DCC90291CA3EC8200BEC4AB /* menu_item_contact@2x.png */,
+				9DCC902A1CA3EC8200BEC4AB /* menu_item_contact@3x.png */,
+				9DCC90311CA3EC8200BEC4AB /* menu_item_opportunity@2x.png */,
+				9DCC90321CA3EC8200BEC4AB /* menu_item_opportunity@3x.png */,
+				9DCC90331CA3EC8200BEC4AB /* menu_item_product@2x.png */,
+				9DCC90341CA3EC8200BEC4AB /* menu_item_product@3x.png */,
+			);
+			name = menu;
 			sourceTree = "<group>";
 		};
 		9DE8D9251C11EA8500B8C2B6 = {
@@ -928,16 +994,20 @@
 				9D30AB631C99059800D86943 /* home_highlited@3x.png in Resources */,
 				9D30AB7E1C99592100D86943 /* guide_iPhone6@2x.png in Resources */,
 				9D30AB5E1C99059800D86943 /* crm_highlited@2x.png in Resources */,
+				9DCC903B1CA3EC8200BEC4AB /* menu_item_highsea@2x.png in Resources */,
 				9D0974D21C9FD17F00FFA75A /* tenant_icon@2x.png in Resources */,
 				9D30AB6B1C99059800D86943 /* message_highlited@3x.png in Resources */,
 				9D30AB7C1C99592100D86943 /* guide_iPhone4@2x.png in Resources */,
 				9D30AB6F1C99059800D86943 /* oa_highlited@3x.png in Resources */,
 				9D30AB951C9AAA8000D86943 /* user_icon_default@2x.png in Resources */,
+				9DCC903E1CA3EC8200BEC4AB /* menu_item_lead@3x.png in Resources */,
+				9DCC90351CA3EC8200BEC4AB /* menu_item_account@2x.png in Resources */,
 				9DCC8FD91CA265C600BEC4AB /* multi_graph_normal@2x.png in Resources */,
 				9D30AB661C99059800D86943 /* me_highlited@2x.png in Resources */,
 				9D30ABAB1C9BC70100D86943 /* password_unlook@3x.png in Resources */,
 				9D30AB6C1C99059800D86943 /* message_normal@2x.png in Resources */,
 				9DCC90041CA26B2100BEC4AB /* SVWebViewControllerActivityChrome-iPad@2x.png in Resources */,
+				9DCC903C1CA3EC8200BEC4AB /* menu_item_highsea@3x.png in Resources */,
 				9DE8D93C1C11EA8700B8C2B6 /* InfoPlist.strings in Resources */,
 				9D30AB711C99059800D86943 /* oa_normal@3x.png in Resources */,
 				9D30AB691C99059800D86943 /* me_normal@3x.png in Resources */,
@@ -949,31 +1019,43 @@
 				9D30AB651C99059800D86943 /* home_normal@3x.png in Resources */,
 				9D30AB7F1C99592100D86943 /* guide_iPhone6Plus@2x.png in Resources */,
 				9D30ABAA1C9BC70100D86943 /* password_unlook@2x.png in Resources */,
+				9DCC903F1CA3EC8200BEC4AB /* menu_item_leadHighsea@2x.png in Resources */,
 				9D30AB611C99059800D86943 /* crm_normal@3x.png in Resources */,
 				9DCC8FAD1CA0E80700BEC4AB /* quickSelect_blue@2x.png in Resources */,
 				9D30AB941C9AAA8000D86943 /* user_icon_default_90@3x.png in Resources */,
+				9DCC90371CA3EC8200BEC4AB /* menu_item_campaign@2x.png in Resources */,
 				9D30AB621C99059800D86943 /* home_highlited@2x.png in Resources */,
 				9D30AB961C9AAA8000D86943 /* user_icon_default@3x.png in Resources */,
+				9DCC90421CA3EC8200BEC4AB /* menu_item_opportunity@3x.png in Resources */,
 				9D30AB6E1C99059800D86943 /* oa_highlited@2x.png in Resources */,
 				9DCC900A1CA26B2100BEC4AB /* SVWebViewControllerActivitySafari-iPad.png in Resources */,
 				9DCC900B1CA26B2100BEC4AB /* SVWebViewControllerActivitySafari-iPad@2x.png in Resources */,
+				9DCC903A1CA3EC8200BEC4AB /* menu_item_contact@3x.png in Resources */,
+				9DCC90361CA3EC8200BEC4AB /* menu_item_account@3x.png in Resources */,
 				9D30AB641C99059800D86943 /* home_normal@2x.png in Resources */,
+				9DCC90401CA3EC8200BEC4AB /* menu_item_leadHighsea@3x.png in Resources */,
 				9D30AB6A1C99059800D86943 /* message_highlited@2x.png in Resources */,
+				9DCC903D1CA3EC8200BEC4AB /* menu_item_lead@2x.png in Resources */,
 				9D30ABA81C9BC70100D86943 /* password_look@2x.png in Resources */,
 				9DCC90011CA26B2100BEC4AB /* SVWebViewController.bundle in Resources */,
+				9DCC90381CA3EC8200BEC4AB /* menu_item_campaign@3x.png in Resources */,
 				9D30ABA91C9BC70100D86943 /* password_look@3x.png in Resources */,
 				9DE8D9441C11EA8800B8C2B6 /* Images.xcassets in Resources */,
 				9DCC90071CA26B2100BEC4AB /* SVWebViewControllerActivityReport-iPad@2x.png in Resources */,
 				9D30AB491C99048600D86943 /* tabbar_background@2x.png in Resources */,
+				9DCC90391CA3EC8200BEC4AB /* menu_item_contact@2x.png in Resources */,
 				9DCC8FD31CA23D6900BEC4AB /* activity_Arrow@2x.png in Resources */,
 				9D30AB7D1C99592100D86943 /* guide_iPhone5@2x.png in Resources */,
+				9DCC90441CA3EC8200BEC4AB /* menu_item_product@3x.png in Resources */,
 				9DCC90061CA26B2100BEC4AB /* SVWebViewControllerActivityChrome@2x.png in Resources */,
 				9D30AB701C99059800D86943 /* oa_normal@2x.png in Resources */,
+				9DCC90431CA3EC8200BEC4AB /* menu_item_product@2x.png in Resources */,
 				9DCC90031CA26B2100BEC4AB /* SVWebViewControllerActivityChrome-iPad.png in Resources */,
 				9D30AB5F1C99059800D86943 /* crm_highlited@3x.png in Resources */,
 				9DCC8FAE1CA0E80700BEC4AB /* quickSelect_gray@2x.png in Resources */,
 				9DCC8FDA1CA265C600BEC4AB /* multi_graph_select@2x.png in Resources */,
 				9D30AB681C99059800D86943 /* me_normal@2x.png in Resources */,
+				9DCC90411CA3EC8200BEC4AB /* menu_item_opportunity@2x.png in Resources */,
 				9D30AB931C9AAA8000D86943 /* user_icon_default_90@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1060,6 +1142,7 @@
 				9D0974D51C9FD4CF00FFA75A /* SKTCompanyListCell.m in Sources */,
 				9D30ABB51C9C01FB00D86943 /* SKTLoginService.m in Sources */,
 				9DCC90111CA26B4B00BEC4AB /* SKTWebViewController.m in Sources */,
+				9DCC90201CA3BC9F00BEC4AB /* SKTRegisterCompanyService.m in Sources */,
 				9DCC8FCC1CA13E3D00BEC4AB /* NSObject+Expanded.m in Sources */,
 				9D472AA01C7D9B4500C9E403 /* SKTPhotoZoomingImageView.m in Sources */,
 				9DCC8FFD1CA26B2100BEC4AB /* NJKWebViewProgress.m in Sources */,
@@ -1075,6 +1158,7 @@
 				9D30AB851C9A51E000D86943 /* SKTRegisterViewController.m in Sources */,
 				9DCC901A1CA2A9CA00BEC4AB /* SKTCheckAccountLoginManager.m in Sources */,
 				9D30AB301C98150B00D86943 /* RDVTabBarController.m in Sources */,
+				9DCC90231CA3BCBC00BEC4AB /* SKTRegisterCompanyManager.m in Sources */,
 				9D30AB881C9A5C6000D86943 /* SKTLogin.m in Sources */,
 				9D30ABA21C9BB5FE00D86943 /* SKTCaptchaButton.m in Sources */,
 				9D4F53EB1C8D536700741CBA /* SKTApiProxy.m in Sources */,
@@ -1089,7 +1173,6 @@
 				9DCC90021CA26B2100BEC4AB /* SVWebViewController.m in Sources */,
 				9DCC8FFE1CA26B2100BEC4AB /* NJKWebViewProgressView.m in Sources */,
 				9D4F53F11C8D546E00741CBA /* SKTURLResponse.m in Sources */,
-				9D30AB401C98F92700D86943 /* SKTCRMViewController.m in Sources */,
 				9D30AB0D1C9684EF00D86943 /* SKTService.m in Sources */,
 				9DE8D93E1C11EA8800B8C2B6 /* main.m in Sources */,
 				9D30AB261C980AF900D86943 /* UIImage+Expanded.m in Sources */,
@@ -1104,6 +1187,7 @@
 				9D0974D01C9FCDD800FFA75A /* SKTCompanyListViewController.m in Sources */,
 				9DCC8FC31CA1388800BEC4AB /* SKTCheckAccountManager.m in Sources */,
 				9D30ABAE1C9BD8CD00D86943 /* UITableView+Expanded.m in Sources */,
+				9DCC90471CA3F34300BEC4AB /* SKTCRMViewController.m in Sources */,
 				9DCC8FBA1CA12CCD00BEC4AB /* SKTCaptchaManager.m in Sources */,
 				9D30AB2F1C98150B00D86943 /* RDVTabBar.m in Sources */,
 				9DCC8FC01CA12FDD00BEC4AB /* SKTRegister.m in Sources */,

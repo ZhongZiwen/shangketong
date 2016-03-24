@@ -18,12 +18,15 @@
 #import "SKTCheckAccountService.h"
 // 注册，创建公司前登录
 #import "SKTCheckAccountLoginService.h"
+// 注册新公司
+#import "SKTRegisterCompanyService.h"
 
 NSString * const kSKTServiceLogin = @"kSKTServiceLogin";
 NSString * const kSKTServiceSelectCompany = @"kSKTServiceSelectCompany";
 NSString * const kSKTServiceCaptcha = @"kSKTServiceCaptcha";
 NSString * const kSKTServiceCheckAccount = @"kSKTServiceCheckAccount";
 NSString * const kSKTServiceCheckAccountLogin = @"kSKTServiceCheckAccountLogin";
+NSString * const kSKTServiceRegisterCompany = @"kSKTServiceRegisterCompany";
 
 @interface SKTServiceFactory ()
 
@@ -71,6 +74,10 @@ NSString * const kSKTServiceCheckAccountLogin = @"kSKTServiceCheckAccountLogin";
     else if ([identifier isEqualToString:kSKTServiceCheckAccountLogin]) {
         SKTCheckAccountLoginService *checkAccountLoginService = [[SKTCheckAccountLoginService alloc] init];
         return checkAccountLoginService;
+    }
+    else if ([identifier isEqualToString:kSKTServiceRegisterCompany]) {
+        SKTRegisterCompanyService *registerCompanyService = [[SKTRegisterCompanyService alloc] init];
+        return registerCompanyService;
     }
     
     return nil;

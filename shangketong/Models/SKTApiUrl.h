@@ -20,3 +20,5 @@
 #define kNetPath_CheckAccountName @"user/validate/checkAccountName.do"
 // 注册，提交账户和密码
 #define kNetPath_CheckAccountPassword @"user/checkAccountPassword.do"
+// 新建公司
+#define kNetPath_RegisterCompany @"user/registerInit.do"

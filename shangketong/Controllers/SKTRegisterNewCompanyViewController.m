@@ -7,22 +7,26 @@
 //
 
 #import "SKTRegisterNewCompanyViewController.h"
-#import <XLForm.h>
 #import <TTTAttributedLabel.h>
 #import "SKTWebViewController.h"
+#import "SKTRegister.h"
+#import "SKTRegisterCompanyManager.h"
+#import "SKTAppDelegate.h"
 
 static NSString *const kCompany = @"company";
 static NSString *const kPosition = @"position";
 static NSString *const kName = @"name";
-static NSString *const kPhone = @"phone";
-static NSString *const kEmail = @"email";
+static NSString *const kContact = @"contact";
 static NSString *const kPassword = @"password";
 
-@interface SKTRegisterNewCompanyViewController ()<TTTAttributedLabelDelegate>
+@interface SKTRegisterNewCompanyViewController ()<TTTAttributedLabelDelegate, SKTApiManagerApiCallBackDelegate, SKTApiManagerParamSourceDelegate, SKTApiManagerInterceptor>
 
 @property (nonatomic, strong) UIButton *commitButton;
 @property (nonatomic, strong) UIButton *agreeButton;
 @property (nonatomic, strong) TTTAttributedLabel *attributedLabel;
+@property (nonatomic, assign) BOOL isAgreed;
+
+@property (nonatomic, strong) SKTRegisterCompanyManager *registerCompanyManager;
 @end
 
 @implementation SKTRegisterNewCompanyViewController
@@ -33,6 +37,8 @@ static NSString *const kPassword = @"password";
 
     self.view.backgroundColor = kBackgroundColor;
 
+    _isAgreed = YES;
+    
     XLFormDescriptor *formDescriptor = [XLFormDescriptor formDescriptor];
 
     XLFormSectionDescriptor *sectionDescriptor = [XLFormSectionDescriptor formSectionWithTitle:@"填写真实材料，让您的同事更容易找到您。"];
@@ -53,12 +59,22 @@ static NSString *const kPassword = @"password";
     [rowDescriptor.cellConfigAtConfigure setObject:@"点击填写" forKey:@"textField.placeholder"];
     [sectionDescriptor addFormRow:rowDescriptor];
 
+    if ([_aRegister.accountString containsString:@"@"]) {
+        rowDescriptor = [XLFormRowDescriptor formRowDescriptorWithTag:kContact rowType:XLFormRowDescriptorTypePhone title:@"手机号"];
+    }
+    else {
+        rowDescriptor = [XLFormRowDescriptor formRowDescriptorWithTag:kContact rowType:XLFormRowDescriptorTypeEmail title:@"邮箱"];
+    }
+    [rowDescriptor.cellConfig setObject:@(NSTextAlignmentRight) forKey:@"textField.textAlignment"];
+    [rowDescriptor.cellConfigAtConfigure setObject:@"点击填写" forKey:@"textField.placeholder"];
+    [sectionDescriptor addFormRow:rowDescriptor];
+
     if (_isFirstRegister) {
         sectionDescriptor = [XLFormSectionDescriptor formSection];
         [formDescriptor addFormSection:sectionDescriptor];
         rowDescriptor = [XLFormRowDescriptor formRowDescriptorWithTag:kPassword rowType:XLFormRowDescriptorTypePassword title:@"密码"];
         [rowDescriptor.cellConfig setObject:@(NSTextAlignmentRight) forKey:@"textField.textAlignment"];
-        rowDescriptor.noValueDisplayText = @"请输入6~16位密码";
+        [rowDescriptor.cellConfigAtConfigure setObject:@"请输入6~16位密码" forKey:@"textField.placeholder"];
         [sectionDescriptor addFormRow:rowDescriptor];
     }
 
@@ -72,6 +88,46 @@ static NSString *const kPassword = @"password";
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - SKTApiManagerApiCallBackDelegate
+- (void)managerCallApiDidSuccess:(SKTApiBaseManager *)manager {
+    [self.view endLoading];
+    NSDictionary *rawData = [manager fetchDataWithReformer:nil];
+
+    [((SKTAppDelegate *) [UIApplication sharedApplication].delegate) setupTabBarViewController];
+}
+
+- (void)managerCallApiDidFailed:(SKTApiBaseManager *)manager {
+    [self.view endLoading];
+}
+
+#pragma mark - SKTApiManagerParamSourceDelegate
+- (NSDictionary *)paramsForApi:(SKTApiBaseManager *)manager {
+    if (_isFirstRegister) {
+        return [_aRegister paramsForFirstRegisterCompany];
+    }
+
+    return [_aRegister paramsForRegisterCompany];
+}
+
+#pragma mark - XLFormDescriptorDelegate
+- (void)formRowDescriptorValueHasChanged:(XLFormRowDescriptor *)formRow oldValue:(id)oldValue newValue:(id)newValue {
+    if ([formRow.tag isEqualToString:kCompany]) {
+        self.aRegister.companyName = [newValue isEqual:[NSNull null]] ? nil : newValue;
+    }
+    else if ([formRow.tag isEqualToString:kPosition]) {
+        self.aRegister.position = [newValue isEqual:[NSNull null]] ? nil : newValue;
+    }
+    else if ([formRow.tag isEqualToString:kName]) {
+        self.aRegister.name = [newValue isEqual:[NSNull null]] ? nil : newValue;
+    }
+    else if ([formRow.tag isEqualToString:kContact]) {
+        self.aRegister.emailOrPhone = [newValue isEqual:[NSNull null]] ? nil : newValue;
+    }
+    else if ([formRow.tag isEqualToString:kPassword]) {
+        self.aRegister.registerCompanyPassword = [newValue isEqual:[NSNull null]] ? nil : newValue;
+    }
+}
+
 #pragma mark - TTTAttributedLabelDelegate
 - (void)attributedLabel:(TTTAttributedLabel *)label didSelectLinkWithTransitInformation:(NSDictionary *)components {
     NSString *urlStr = @"http://app.sunke.com/user/service.jsf";
@@ -81,11 +137,19 @@ static NSString *const kPassword = @"password";
 
 #pragma mark - event response
 - (void)commitButtonClicked {
-
+    [self.view beginLoading];
+    [self.registerCompanyManager loadData];
 }
 
 - (void)agreeButtonPress:(UIButton *)sender {
-
+    if (self.isAgreed) {
+        self.isAgreed = NO;
+        [sender setImage:[UIImage imageNamed:@"multi_graph_normal"] forState:UIControlStateNormal];
+    }
+    else {
+        self.isAgreed = YES;
+        [sender setImage:[UIImage imageNamed:@"multi_graph_select"] forState:UIControlStateNormal];
+    }
 }
 
 #pragma mark - private method
@@ -96,11 +160,6 @@ static NSString *const kPassword = @"password";
     [footerView addSubview:self.agreeButton];
     [footerView addSubview:self.attributedLabel];
 
-    [_commitButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.size.mas_equalTo(CGSizeMake(kScreen_Width - 2 * 20, 45));
-        make.top.equalTo(footerView);
-        make.centerX.equalTo(footerView);
-    }];
     [_agreeButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.mas_equalTo(CGSizeMake(44.0f, 44.0f));
         make.left.equalTo(footerView).offset(10);
@@ -109,9 +168,31 @@ static NSString *const kPassword = @"password";
     [_attributedLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(_agreeButton.mas_right);
         make.right.equalTo(footerView).offset(-15);
-        make.height.mas_equalTo(10);
+        make.height.mas_equalTo(20);
         make.centerY.equalTo(_agreeButton);
     }];
+
+    if (_isFirstRegister) {
+        RAC(self.commitButton, enabled) = [RACSignal combineLatest:@[RACObserve(self.aRegister, companyName),
+                                                                     RACObserve(self.aRegister, position),
+                                                                     RACObserve(self.aRegister, name),
+                                                                     RACObserve(self.aRegister, emailOrPhone),
+                                                                     RACObserve(self.aRegister, registerCompanyPassword),
+                                                                     RACObserve(self, isAgreed)]
+                                                            reduce:^id(NSString *companyName, NSString *position, NSString *name, NSString *emailOrPhone, NSString *password, NSNumber *isAgreed){
+                                                                         return @((companyName && companyName.length > 0) && (position && position.length > 0) && (name && name.length > 0) && (emailOrPhone && emailOrPhone.length > 0) && (password && password.length >= 6 && password.length < 16) && [isAgreed integerValue]);
+                                                                     }];
+    }
+    else {
+        RAC(self.commitButton, enabled) = [RACSignal combineLatest:@[RACObserve(self.aRegister, companyName),
+                                                                     RACObserve(self.aRegister, position),
+                                                                     RACObserve(self.aRegister, name),
+                                                                     RACObserve(self.aRegister, emailOrPhone),
+                                                                     RACObserve(self, isAgreed)]
+                                                            reduce:^id(NSString *companyName, NSString *position, NSString *name, NSString *emailOrPhone, NSNumber *isAgreed){
+                                                                         return @((companyName && companyName.length > 0) && (position && position.length > 0) && (name && name.length > 0) && (emailOrPhone && emailOrPhone.length > 0) && [isAgreed integerValue]);
+                                                                     }];
+    }
 
     return footerView;
 }
@@ -119,14 +200,7 @@ static NSString *const kPassword = @"password";
 #pragma mark - getters and setters
 - (UIButton *)commitButton {
     if (!_commitButton) {
-        _commitButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        _commitButton.backgroundColor = [UIColor colorWithHexString:@"0x3bbc79"];
-        _commitButton.titleLabel.font = [UIFont systemFontOfSize:17];
-        [_commitButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        [_commitButton setTitle:@"提交资料" forState:UIControlStateNormal];
-        _commitButton.layer.cornerRadius = 45 / 2;
-        _commitButton.layer.masksToBounds = YES;
-        [_commitButton addTarget:self action:@selector(commitButtonClicked) forControlEvents:UIControlEventTouchUpInside];
+        _commitButton = [UIButton buttonWithStyle:StrapSuccessStyle andTitle:@"提交资料" andFrame:CGRectMake(20, 0, kScreen_Width - 2 * 20, 45) target:self action:@selector(commitButtonClicked)];
     }
     return _commitButton;
 }
@@ -153,6 +227,16 @@ static NSString *const kPassword = @"password";
         [_attributedLabel addLinkToTransitInformation:nil withRange:range];
     }
     return _attributedLabel;
+}
+
+- (SKTRegisterCompanyManager *)registerCompanyManager {
+    if (!_registerCompanyManager) {
+        _registerCompanyManager = [[SKTRegisterCompanyManager alloc] init];
+        _registerCompanyManager.delegate = self;
+        _registerCompanyManager.paramSource = self;
+        _registerCompanyManager.interceptor = self;
+    }
+    return _registerCompanyManager;
 }
 /*
 #pragma mark - Navigation

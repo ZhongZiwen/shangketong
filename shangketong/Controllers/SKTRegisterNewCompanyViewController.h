@@ -8,7 +8,10 @@
 
 #import <XLForm/XLForm.h>
 
+@class SKTRegister;
+
 @interface SKTRegisterNewCompanyViewController : XLFormViewController
 
-@property(nonatomic, assign) BOOL isFirstRegister;
+@property (nonatomic, strong) SKTRegister *aRegister;
+@property (nonatomic, assign) BOOL isFirstRegister;
 @end

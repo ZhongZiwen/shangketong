@@ -116,6 +116,8 @@
     if (![rawData[@"result"] integerValue]) {  // 初始化,新建公司
         SKTRegisterNewCompanyViewController *newCompanyController = [[SKTRegisterNewCompanyViewController alloc] init];
         newCompanyController.title = @"初识设置";
+        newCompanyController.isFirstRegister = YES;
+        newCompanyController.aRegister = _mRegister;
         [self.navigationController pushViewController:newCompanyController animated:YES];
     }
     else if ([rawData[@"result"] integerValue] == 2) {  // 注册账号已存在，显示公司列表

@@ -37,10 +37,6 @@
 }
 
 - (BOOL)manager:(SKTApiBaseManager *)manager isCorrectWithCallBackData:(NSDictionary *)data {
-    if (![data[@"status"] integerValue]) {
-        return YES;
-    }
-    
-    return NO;
+    return YES;
 }
 @end

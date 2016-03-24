@@ -28,7 +28,12 @@
 }
 
 - (BOOL)manager:(SKTApiBaseManager *)manager isCorrectWithCallBackData:(NSDictionary *)data {
-    return YES;
+    if (![data[@"status"] integerValue]) {
+        return YES;
+    }
+
+    [NSObject showHudTipStr:data[@"desc"]];
+    return NO;
 }
 
 #pragma mark - SKTApiManager

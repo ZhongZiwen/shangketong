@@ -10,6 +10,8 @@
 
 @interface NSString (Expanded)
 
+- (BOOL)isEmail;
+- (BOOL)isPhoneNumber;
 - (NSString *)trimWhitespace;
 - (BOOL)isEmpty;
 @end

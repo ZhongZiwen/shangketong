@@ -14,4 +14,19 @@
     return @{@"accountName" : _accountString,
              @"captcha" : _captchaString};
 }
+
+- (NSDictionary *)paramsForFirstRegisterCompany {
+    return @{@"companyName" : _companyName,
+             @"position" : _position,
+             @"userName" : _name,
+             @"contact" : _emailOrPhone,
+             @"password" : _registerCompanyPassword};
+}
+
+- (NSDictionary *)paramsForRegisterCompany {
+    return @{@"companyName" : _companyName,
+             @"position" : _position,
+             @"userName" : _name,
+             @"contact" : _emailOrPhone};
+}
 @end
