@@ -1,5 +1,5 @@
 //
-//  SKTOfficeViewController.h
+//  XLFormImageTitleCell.h
 //  shangketong
 //
 //  Created by sungoin-zbs on 16/3/25.
@@ -8,6 +8,8 @@
 
 #import <XLForm/XLForm.h>
 
-@interface SKTOfficeViewController : XLFormViewController
+extern NSString * const XLFormRowDescriptorTypeCustomImageTitle;
+
+@interface XLFormImageTitleCell : XLFormBaseCell
 
 @end
