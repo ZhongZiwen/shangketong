@@ -55,7 +55,9 @@
     SKTService *service = [[SKTServiceFactory sharedInstance] serviceWithIdentifier:serviceIdentifier];
     
     NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary:[SKTCommonParamsGenerator commonParams]];
-    [params addEntriesFromDictionary:requestParams];
+    if (requestParams) {
+        [params addEntriesFromDictionary:requestParams];
+    }
     
     NSString *urlString;
     if (service.apiVersion) {

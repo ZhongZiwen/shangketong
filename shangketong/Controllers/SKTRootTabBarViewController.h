@@ -6,8 +6,8 @@
 //  Copyright © 2016年 sungoin. All rights reserved.
 //
 
-#import "RDVTabBarController.h"
+#import <UIKit/UIKit.h>
 
-@interface SKTRootTabBarViewController : RDVTabBarController
+@interface SKTRootTabBarViewController : UITabBarController
 
 @end

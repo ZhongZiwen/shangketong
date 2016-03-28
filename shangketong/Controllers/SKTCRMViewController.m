@@ -7,9 +7,11 @@
 //
 
 #import "SKTCRMViewController.h"
+#import "SKTActivityViewController.h"
+
 #import "XLFormImageTitleCell.h"
 
-static NSString * const kCampaign = @"campaign";  // 市场活动
+static NSString * const kActivity = @"activity";  // 市场活动
 static NSString * const kLeadPool = @"leadPool";  // 线索公海池
 static NSString * const kLead = @"lead";  // 销售线索
 static NSString * const kCustomerPool = @"customerPool";  // 客户公海池
@@ -37,7 +39,7 @@ static NSString * const kProduct = @"product";  // 产品
     [formDescriptor addFormSection:sectionDescriptor];
 
     // 市场活动
-    rowDescriptor = [XLFormRowDescriptor formRowDescriptorWithTag:kCampaign rowType:XLFormRowDescriptorTypeCustomImageTitle];
+    rowDescriptor = [XLFormRowDescriptor formRowDescriptorWithTag:kActivity rowType:XLFormRowDescriptorTypeCustomImageTitle];
     rowDescriptor.value = @{@"image" : @"menu_item_campaign", @"title" : @"市场活动"};
     [sectionDescriptor addFormRow:rowDescriptor];
 
@@ -106,7 +108,15 @@ static NSString * const kProduct = @"product";  // 产品
 #pragma mark - UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
+
+    XLFormRowDescriptor *rowDescriptor = [self.form formRowAtIndex:indexPath];
+
+    if ([rowDescriptor.tag isEqualToString:kActivity]) {
+        SKTActivityViewController *activityViewController = [[SKTActivityViewController alloc] init];
+        activityViewController.title = @"市场活动";
+        activityViewController.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:activityViewController animated:YES];
+    }
 
 }
 

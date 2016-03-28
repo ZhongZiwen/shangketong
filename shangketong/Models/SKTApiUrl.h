@@ -26,6 +26,8 @@
 /***************市场活动***************/
 // 市场活动初始化
 #define kNetPath_Activity_InitData @"market-activity/initData.do"
+// 市场活动列表
+#define kNetPath_Activity_List @"market-activity/getActivityList.do"
 
 /***************销售线索***************/
 

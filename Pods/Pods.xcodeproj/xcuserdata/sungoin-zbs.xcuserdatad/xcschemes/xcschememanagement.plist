@@ -59,6 +59,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SWTableViewCell.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>TPKeyboardAvoiding.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -82,22 +87,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>10A0958B17EDCB586EB91DE3389CD56C</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>2602F3D0DAC534568B6AD7EEA0DD1959</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>2A0D9585A1EB7CF54EC8BDAB9F6818C4</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>3AE428402C75BC6F755E770550A3C8AD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -107,17 +97,32 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4621B71B7A638CBC97D9AADCAF24CD80</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>53480ED0BE09FF49E34B1702D485CAAB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9AAB1889E22BDC505F3684B3F76C8C7A</key>
+		<key>599E9DA1EBA9AA3BA5A0D1A25ACFFD56</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>60D13295AA93B61D702C6A4403E88E83</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7970B2970A1694AEBB52839FAB69F8B7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>80708FFA6D28FAAD41A323E24C1935F3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8C43790F266FC08E73F6814B05587A0B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -127,27 +132,32 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A6FF7C7959051440B0E4D0CEC4C325EC</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>ABEE25DF53551353473553415F70D9CD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AF0E70D497AB2D71E63163C968B99CAC</key>
+		<key>B7FCEC1CD94F723412268F852548A105</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C9C282A7612C14955A64B477CD22CDCB</key>
+		<key>BE71CB4AC95A25946D2019C195967CB3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C8B2935E3E450BAAE391B2D0AF1F7431</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>DA1A7295DF2A99609DA0EEBF5E83233D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EECE70ECE1431009C88AFB0713BB6A22</key>
 		<dict>
 			<key>primary</key>
 			<true/>

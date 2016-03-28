@@ -54,6 +54,7 @@ PODS:
   - SDWebImage (3.7.5):
     - SDWebImage/Core (= 3.7.5)
   - SDWebImage/Core (3.7.5)
+  - SWTableViewCell (0.3.7)
   - TPKeyboardAvoiding (1.2.11)
   - TTTAttributedLabelVodafone (1.13.3.1)
   - XLForm (3.1.1)
@@ -70,6 +71,7 @@ DEPENDENCIES:
   - Reachability (= 3.2)
   - ReactiveCocoa (= 2.3.1)
   - SDWebImage (~> 3.7.5)
+  - SWTableViewCell (= 0.3.7)
   - TPKeyboardAvoiding (= 1.2.11)
   - TTTAttributedLabelVodafone (= 1.13.3.1)
   - XLForm (= 3.1.1)
@@ -86,6 +88,7 @@ SPEC CHECKSUMS:
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   ReactiveCocoa: 3fe9b233ca6db810e86681b5749488564c1179a1
   SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
+  SWTableViewCell: 2a94aadc9d47b2b611fa064566bf57948b95b579
   TPKeyboardAvoiding: e5ce146b313de063957bfa75a13f1e9b0ff18ab7
   TTTAttributedLabelVodafone: 6f06ab97d41be816a0cf9994d84fa4e99a962d07
   XLForm: c9ee7e0f859341279bfd894f9589a9d25c23e4df

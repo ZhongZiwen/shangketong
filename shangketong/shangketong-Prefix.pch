@@ -41,6 +41,7 @@
 #define kScaleFrom_iPhone5_Desgin(_X_) (_X_ * (kScreen_Width/320))
 
 #define kBackgroundColor [UIColor colorWithHexString:@"0xf8f8f8"]
+#define kTableViewSeparatorColor [UIColor colorWithRed:229.0f/255.0f green:229.0f/255.0f blue:229.0f/255.0f alpha:1]
 #define kNavTitleFontSize 19
 #define kBadgeTipStr @"badgeTip"
 
