@@ -86,6 +86,9 @@
 		9D4F53F81C8D71A400741CBA /* NSURLRequest+SKTNetworkingMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D4F53F71C8D71A400741CBA /* NSURLRequest+SKTNetworkingMethods.m */; };
 		9D4F53FB1C8D7DF700741CBA /* SKTCommonParamsGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D4F53FA1C8D7DF700741CBA /* SKTCommonParamsGenerator.m */; };
 		9D4F53FE1C8D7E1900741CBA /* SKTRequestGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D4F53FD1C8D7E1900741CBA /* SKTRequestGenerator.m */; };
+		9D7B41BF1CA8D1AB00996DD3 /* SKTCRMIndexManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B41BE1CA8D1AB00996DD3 /* SKTCRMIndexManager.m */; };
+		9D7B41C21CA8D1C100996DD3 /* SKTCRMFilterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B41C11CA8D1C100996DD3 /* SKTCRMFilterManager.m */; };
+		9D7B41C51CA8D1FF00996DD3 /* SKTActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B41C41CA8D1FF00996DD3 /* SKTActivityViewController.m */; };
 		9DCC8FAD1CA0E80700BEC4AB /* quickSelect_blue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DCC8FAB1CA0E80700BEC4AB /* quickSelect_blue@2x.png */; };
 		9DCC8FAE1CA0E80700BEC4AB /* quickSelect_gray@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DCC8FAC1CA0E80700BEC4AB /* quickSelect_gray@2x.png */; };
 		9DCC8FB11CA0F9F000BEC4AB /* SKTSelectCompanyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DCC8FB01CA0F9F000BEC4AB /* SKTSelectCompanyManager.m */; };
@@ -313,6 +316,12 @@
 		9D4F53FA1C8D7DF700741CBA /* SKTCommonParamsGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTCommonParamsGenerator.m; sourceTree = "<group>"; };
 		9D4F53FC1C8D7E1900741CBA /* SKTRequestGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTRequestGenerator.h; sourceTree = "<group>"; };
 		9D4F53FD1C8D7E1900741CBA /* SKTRequestGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTRequestGenerator.m; sourceTree = "<group>"; };
+		9D7B41BD1CA8D1AB00996DD3 /* SKTCRMIndexManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTCRMIndexManager.h; sourceTree = "<group>"; };
+		9D7B41BE1CA8D1AB00996DD3 /* SKTCRMIndexManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTCRMIndexManager.m; sourceTree = "<group>"; };
+		9D7B41C01CA8D1C100996DD3 /* SKTCRMFilterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTCRMFilterManager.h; sourceTree = "<group>"; };
+		9D7B41C11CA8D1C100996DD3 /* SKTCRMFilterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTCRMFilterManager.m; sourceTree = "<group>"; };
+		9D7B41C31CA8D1FF00996DD3 /* SKTActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTActivityViewController.h; sourceTree = "<group>"; };
+		9D7B41C41CA8D1FF00996DD3 /* SKTActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTActivityViewController.m; sourceTree = "<group>"; };
 		9DCC8FAB1CA0E80700BEC4AB /* quickSelect_blue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "quickSelect_blue@2x.png"; sourceTree = "<group>"; };
 		9DCC8FAC1CA0E80700BEC4AB /* quickSelect_gray@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "quickSelect_gray@2x.png"; sourceTree = "<group>"; };
 		9DCC8FAF1CA0F9F000BEC4AB /* SKTSelectCompanyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTSelectCompanyManager.h; sourceTree = "<group>"; };
@@ -467,6 +476,8 @@
 		07696CF41CA775B5006B5479 /* CRM */ = {
 			isa = PBXGroup;
 			children = (
+				9D7B41C31CA8D1FF00996DD3 /* SKTActivityViewController.h */,
+				9D7B41C41CA8D1FF00996DD3 /* SKTActivityViewController.m */,
 			);
 			name = CRM;
 			sourceTree = "<group>";
@@ -762,6 +773,10 @@
 				9DCC90221CA3BCBC00BEC4AB /* SKTRegisterCompanyManager.m */,
 				07696CF81CA820DD006B5479 /* SKTCRMInitDataManager.h */,
 				07696CF91CA820DD006B5479 /* SKTCRMInitDataManager.m */,
+				9D7B41BD1CA8D1AB00996DD3 /* SKTCRMIndexManager.h */,
+				9D7B41BE1CA8D1AB00996DD3 /* SKTCRMIndexManager.m */,
+				9D7B41C01CA8D1C100996DD3 /* SKTCRMFilterManager.h */,
+				9D7B41C11CA8D1C100996DD3 /* SKTCRMFilterManager.m */,
 			);
 			name = ApiManager;
 			sourceTree = "<group>";
@@ -1234,6 +1249,7 @@
 				9D4F53EE1C8D53A100741CBA /* SKTApiBaseManager.m in Sources */,
 				9D30AB341C98155700D86943 /* SKTRootTabBarViewController.m in Sources */,
 				9D0974CD1C9FC7A300FFA75A /* SKTLoginReformer.m in Sources */,
+				9D7B41C51CA8D1FF00996DD3 /* SKTActivityViewController.m in Sources */,
 				9DCC901D1CA2AA5100BEC4AB /* SKTCheckAccountLoginService.m in Sources */,
 				9D30AB1D1C98026C00D86943 /* UILabel+ContentSize.m in Sources */,
 				9DCC90141CA26C9B00BEC4AB /* NSString+Expanded.m in Sources */,
@@ -1266,6 +1282,7 @@
 				9D30AB3A1C98F90400D86943 /* SKTHomeViewController.m in Sources */,
 				9DCC90001CA26B2100BEC4AB /* SVModalWebViewController.m in Sources */,
 				9D30AB851C9A51E000D86943 /* SKTRegisterViewController.m in Sources */,
+				9D7B41BF1CA8D1AB00996DD3 /* SKTCRMIndexManager.m in Sources */,
 				9DCC901A1CA2A9CA00BEC4AB /* SKTCheckAccountLoginManager.m in Sources */,
 				07696CF31CA681BB006B5479 /* XLFormHeaderCell.m in Sources */,
 				9D30AB301C98150B00D86943 /* RDVTabBarController.m in Sources */,
@@ -1275,6 +1292,7 @@
 				9D4F53EB1C8D536700741CBA /* SKTApiProxy.m in Sources */,
 				9D30AB771C99579200D86943 /* SKTIntroductionViewController.m in Sources */,
 				07696CE81CA58F3E006B5479 /* SKTMeViewController.m in Sources */,
+				9D7B41C21CA8D1C100996DD3 /* SKTCRMFilterManager.m in Sources */,
 				9D30AB231C98091400D86943 /* UIColor+expanded.m in Sources */,
 				9DCC8FC61CA138A400BEC4AB /* SKTCheckAccountService.m in Sources */,
 				9DCC900C1CA26B2100BEC4AB /* SVWebViewControllerActivitySafari.m in Sources */,

@@ -107,7 +107,7 @@ static NSString * const kProduct = @"product";  // 产品
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    NSLog(@"row = %d", indexPath.row);
+
 }
 
 /*
