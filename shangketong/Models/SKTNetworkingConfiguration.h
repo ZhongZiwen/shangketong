@@ -33,6 +33,6 @@ extern NSString * const kSKTServiceCaptcha;
 extern NSString * const kSKTServiceCheckAccount;
 extern NSString * const kSKTServiceCheckAccountLogin;
 extern NSString * const kSKTServiceRegisterCompany;
-
+extern NSString * const kSKTServiceCRM;
 
 #endif /* SKTNetworkingConfiguration_h */

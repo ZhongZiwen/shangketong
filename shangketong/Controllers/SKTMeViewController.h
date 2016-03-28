@@ -2,12 +2,12 @@
 //  SKTMeViewController.h
 //  shangketong
 //
-//  Created by sungoin-zbs on 16/3/16.
+//  Created by 钟必胜 on 16/3/25.
 //  Copyright © 2016年 sungoin. All rights reserved.
 //
 
-#import "SKTBaseViewController.h"
+#import <XLForm/XLForm.h>
 
-@interface SKTMeViewController : SKTBaseViewController
+@interface SKTMeViewController : XLFormViewController
 
 @end

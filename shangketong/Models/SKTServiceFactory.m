@@ -20,6 +20,8 @@
 #import "SKTCheckAccountLoginService.h"
 // 注册新公司
 #import "SKTRegisterCompanyService.h"
+// crm service
+#import "SKTCRMService.h"
 
 NSString * const kSKTServiceLogin = @"kSKTServiceLogin";
 NSString * const kSKTServiceSelectCompany = @"kSKTServiceSelectCompany";
@@ -27,6 +29,7 @@ NSString * const kSKTServiceCaptcha = @"kSKTServiceCaptcha";
 NSString * const kSKTServiceCheckAccount = @"kSKTServiceCheckAccount";
 NSString * const kSKTServiceCheckAccountLogin = @"kSKTServiceCheckAccountLogin";
 NSString * const kSKTServiceRegisterCompany = @"kSKTServiceRegisterCompany";
+NSString * const kSKTServiceCRM = @"kSKTServiceCRM";
 
 @interface SKTServiceFactory ()
 
@@ -78,6 +81,10 @@ NSString * const kSKTServiceRegisterCompany = @"kSKTServiceRegisterCompany";
     else if ([identifier isEqualToString:kSKTServiceRegisterCompany]) {
         SKTRegisterCompanyService *registerCompanyService = [[SKTRegisterCompanyService alloc] init];
         return registerCompanyService;
+    }
+    else if ([identifier isEqualToString:kSKTServiceCRM]) {
+        SKTCRMService *crmService = [[SKTCRMService alloc] init];
+        return crmService;
     }
     
     return nil;

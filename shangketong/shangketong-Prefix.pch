@@ -24,6 +24,7 @@
 #import <Masonry.h>
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import <ReactiveCocoa/RACEXTScope.h>
+#import <UIImageView+WebCache.h>
 
 #endif
 

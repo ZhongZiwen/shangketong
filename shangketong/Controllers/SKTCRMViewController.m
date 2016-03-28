@@ -86,6 +86,7 @@ static NSString * const kProduct = @"product";  // 产品
     [sectionDescriptor addFormRow:rowDescriptor];
 
     self.form = formDescriptor;
+    self.tableView.backgroundColor = kBackgroundColor;
 }
 
 - (void)didReceiveMemoryWarning {

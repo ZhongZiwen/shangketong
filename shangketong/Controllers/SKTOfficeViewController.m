@@ -76,6 +76,7 @@ static NSString * const kKnowledgeBase = @"knowledgeBase";  // 知识库
     [sectionDescriptor addFormRow:rowDescriptor];
 
     self.form = formDescriptor;
+    self.tableView.backgroundColor = kBackgroundColor;
 }
 
 - (void)didReceiveMemoryWarning {
