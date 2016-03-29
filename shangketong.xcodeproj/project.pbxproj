@@ -91,6 +91,7 @@
 		9D7B41C51CA8D1FF00996DD3 /* SKTActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B41C41CA8D1FF00996DD3 /* SKTActivityViewController.m */; };
 		9D7B41CB1CA9106400996DD3 /* SKTActivityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B41CA1CA9106400996DD3 /* SKTActivityTableViewCell.m */; };
 		9D7B41CE1CA9250400996DD3 /* SKTCRMListManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B41CD1CA9250400996DD3 /* SKTCRMListManager.m */; };
+		9D7B41D51CAA5CA800996DD3 /* SKTActivityListReformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B41D41CAA5CA800996DD3 /* SKTActivityListReformer.m */; };
 		9DCC8FAD1CA0E80700BEC4AB /* quickSelect_blue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DCC8FAB1CA0E80700BEC4AB /* quickSelect_blue@2x.png */; };
 		9DCC8FAE1CA0E80700BEC4AB /* quickSelect_gray@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DCC8FAC1CA0E80700BEC4AB /* quickSelect_gray@2x.png */; };
 		9DCC8FB11CA0F9F000BEC4AB /* SKTSelectCompanyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DCC8FB01CA0F9F000BEC4AB /* SKTSelectCompanyManager.m */; };
@@ -328,6 +329,8 @@
 		9D7B41CA1CA9106400996DD3 /* SKTActivityTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTActivityTableViewCell.m; sourceTree = "<group>"; };
 		9D7B41CC1CA9250400996DD3 /* SKTCRMListManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTCRMListManager.h; sourceTree = "<group>"; };
 		9D7B41CD1CA9250400996DD3 /* SKTCRMListManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTCRMListManager.m; sourceTree = "<group>"; };
+		9D7B41D31CAA5CA800996DD3 /* SKTActivityListReformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTActivityListReformer.h; sourceTree = "<group>"; };
+		9D7B41D41CAA5CA800996DD3 /* SKTActivityListReformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTActivityListReformer.m; sourceTree = "<group>"; };
 		9DCC8FAB1CA0E80700BEC4AB /* quickSelect_blue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "quickSelect_blue@2x.png"; sourceTree = "<group>"; };
 		9DCC8FAC1CA0E80700BEC4AB /* quickSelect_gray@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "quickSelect_gray@2x.png"; sourceTree = "<group>"; };
 		9DCC8FAF1CA0F9F000BEC4AB /* SKTSelectCompanyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTSelectCompanyManager.h; sourceTree = "<group>"; };
@@ -748,9 +751,21 @@
 			name = login;
 			sourceTree = "<group>";
 		};
+		9D7B41D21CAA5C2E00996DD3 /* Reformer */ = {
+			isa = PBXGroup;
+			children = (
+				9D0974CB1C9FC7A300FFA75A /* SKTLoginReformer.h */,
+				9D0974CC1C9FC7A300FFA75A /* SKTLoginReformer.m */,
+				9D7B41D31CAA5CA800996DD3 /* SKTActivityListReformer.h */,
+				9D7B41D41CAA5CA800996DD3 /* SKTActivityListReformer.m */,
+			);
+			name = Reformer;
+			sourceTree = "<group>";
+		};
 		9D9C3A131C521EBD006BA0A1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				9D7B41D21CAA5C2E00996DD3 /* Reformer */,
 				9DCC8FC81CA13B0300BEC4AB /* ApiService */,
 				9DCC8FC71CA13AEE00BEC4AB /* ApiManager */,
 				9D30AB121C97F94000D86943 /* SKTNetworking */,
@@ -758,8 +773,6 @@
 				9D30AB871C9A5C6000D86943 /* SKTLogin.m */,
 				9DCC8FBE1CA12FDD00BEC4AB /* SKTRegister.h */,
 				9DCC8FBF1CA12FDD00BEC4AB /* SKTRegister.m */,
-				9D0974CB1C9FC7A300FFA75A /* SKTLoginReformer.h */,
-				9D0974CC1C9FC7A300FFA75A /* SKTLoginReformer.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1285,6 +1298,7 @@
 				9DCC8FFD1CA26B2100BEC4AB /* NJKWebViewProgress.m in Sources */,
 				9D7B41CB1CA9106400996DD3 /* SKTActivityTableViewCell.m in Sources */,
 				0703E6811CA1B2410031B788 /* SKTRegisterCompanyListViewController.m in Sources */,
+				9D7B41D51CAA5CA800996DD3 /* SKTActivityListReformer.m in Sources */,
 				9D30AB821C9A51C600D86943 /* SKTLoginViewController.m in Sources */,
 				9DCC8FB41CA0FB3A00BEC4AB /* SKTSelectCompanyService.m in Sources */,
 				9D472AA31C7D9EF200C9E403 /* UIView+Common.m in Sources */,

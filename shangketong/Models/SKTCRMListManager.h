@@ -19,4 +19,7 @@ typedef NS_ENUM(NSUInteger, SKTCRMListManagerType) {
 @interface SKTCRMListManager : SKTApiBaseManager<SKTApiManager, SKTApiManagerValidator>
 
 @property (nonatomic, assign) SKTCRMListManagerType listManagerType;
+@property (nonatomic, assign) NSInteger nextPageNumber;
+
+- (void)loadNextPage;
 @end

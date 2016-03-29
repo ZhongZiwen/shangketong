@@ -12,6 +12,7 @@
 #import "SKTCRMFilterManager.h"
 #import "SKTCRMListManager.h"
 #import "SKTActivityTableViewCell.h"
+#import "SKTActivityListReformer.h"
 
 @interface SKTActivityViewController ()<SKTApiManagerApiCallBackDelegate, SKTApiManagerParamSourceDelegate, SKTApiManagerInterceptor, UITableViewDataSource, UITableViewDelegate>
 
@@ -21,6 +22,9 @@
 @property (nonatomic, strong) SKTCRMIndexManager *indexManager;
 @property (nonatomic, strong) SKTCRMFilterManager *filterManager;
 @property (nonatomic, strong) SKTCRMListManager *listManager;
+@property (nonatomic, strong) SKTActivityListReformer *listReformer;
+
+@property (nonatomic, strong) NSMutableArray *listSourceArray;
 @end
 
 @implementation SKTActivityViewController
@@ -35,6 +39,7 @@
         make.edges.equalTo(self.view);
     }];
 
+    [self.view beginLoading];
     [self.initializeDataManager loadData];
 }
 
@@ -45,12 +50,12 @@
 
 #pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 20;
+    return self.listSourceArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     SKTActivityTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellIdentifier forIndexPath:indexPath];
-
+    [cell configWithDictionary:self.listSourceArray[indexPath.row]];
     return cell;
 }
 
@@ -58,7 +63,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 
-
+    [self.listManager loadData];
 }
 
 #pragma mark - SKTApiManagerApiCallBackDelegate
@@ -74,8 +79,9 @@
 
     }
     else if (manager == _listManager) {
-        NSDictionary *rawData = [manager fetchDataWithReformer:nil];
-        NSLog(@"rawData = %@", rawData);
+        [self.view endLoading];
+        self.listSourceArray = [[NSMutableArray alloc] initWithArray:[manager fetchDataWithReformer:self.listReformer]];
+        [self.tableView reloadData];
     }
 }
 
@@ -89,7 +95,7 @@
         return nil;
     }
     else if (manager == _listManager) {
-        return nil;
+        return @{@"order" : @1};
     }
     
     return nil;
@@ -97,8 +103,9 @@
 
 #pragma mark - SKTApiManagerInterceptor
 - (void)manager:(SKTApiBaseManager *)manager beforePerformSuccessWithResponse:(SKTURLResponse *)response {
-    
+    NSLog(@"判断是否显示加载更多控件");
 }
+
 
 #pragma mark - getters and setters
 - (UITableView *)tableView {
@@ -132,6 +139,20 @@
         _listManager.interceptor = self;
     }
     return _listManager;
+}
+
+- (SKTActivityListReformer *)listReformer {
+    if (!_listReformer) {
+        _listReformer = [[SKTActivityListReformer alloc] init];
+    }
+    return _listReformer;
+}
+
+- (NSMutableArray *)listSourceArray {
+    if (!_listSourceArray) {
+        _listSourceArray = [[NSMutableArray alloc] init];
+    }
+    return _listSourceArray;
 }
 /*
 #pragma mark - Navigation

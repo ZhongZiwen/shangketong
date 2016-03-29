@@ -30,6 +30,10 @@
     return self;
 }
 
+- (void)configWithDictionary:(NSDictionary *)dict {
+    _titleLabel.text = [NSString stringWithFormat:@"%@", dict[@"name"]];
+}
+
 #pragma mark - getters and setters
 - (UILabel *)titleLabel {
     if (!_titleLabel) {

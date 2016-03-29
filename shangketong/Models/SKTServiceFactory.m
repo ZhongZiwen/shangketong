@@ -33,7 +33,7 @@ NSString * const kSKTServiceCRM = @"kSKTServiceCRM";
 
 @interface SKTServiceFactory ()
 
-@property (strong, nonatomic) NSMutableDictionary *serviceStorage;
+@property (nonatomic, strong) NSCache *serviceStorage;
 @end
 
 @implementation SKTServiceFactory
@@ -49,10 +49,11 @@ NSString * const kSKTServiceCRM = @"kSKTServiceCRM";
 
 #pragma mark - public method
 - (SKTService<SKTServiceProtocol> *)serviceWithIdentifier:(NSString *)identifier {
-    if (!self.serviceStorage[identifier]) {
-        self.serviceStorage[identifier] = [self newServiceWithIdentifier:identifier];
+    
+    if (![self.serviceStorage objectForKey:identifier]) {
+        [self.serviceStorage setObject:[self newServiceWithIdentifier:identifier] forKey:identifier];
     }
-    return self.serviceStorage[identifier];
+    return [self.serviceStorage objectForKey:identifier];
 }
 
 #pragma mark - private method
@@ -91,9 +92,10 @@ NSString * const kSKTServiceCRM = @"kSKTServiceCRM";
 }
 
 #pragma mark - setters and getters
-- (NSMutableDictionary *)serviceStorage {
+- (NSCache *)serviceStorage {
     if (!_serviceStorage) {
-        _serviceStorage = [[NSMutableDictionary alloc] init];
+        _serviceStorage = [[NSCache alloc] init];
+        _serviceStorage.countLimit = 5;  // 我在这里随意定了一个，具体的值还是要取决于各自App的要求。
     }
     return _serviceStorage;
 }

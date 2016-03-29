@@ -246,6 +246,21 @@
     }
 }
 
+- (void)cleanData {
+    IMP childIMP = [self.child methodForSelector:@selector(cleanData)];
+    IMP selfIMP = [self methodForSelector:@selector(cleanData)];
+    
+    if (childIMP == selfIMP) {
+        self.fetchedRawData = nil;
+        self.errorMessage = nil;
+        self.errorType = SKTApiManagerErrorTypeDefault;
+    } else {
+        if ([self.child respondsToSelector:@selector(cleanData)]) {
+            [self.child cleanData];
+        }
+    }
+}
+
 #pragma mark - setters and getters
 - (NSMutableArray *)requestIdList {
     if (!_requestIdList) {

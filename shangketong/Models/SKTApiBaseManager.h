@@ -128,4 +128,5 @@ typedef NS_ENUM(NSUInteger, SKTApiManagerRequestType) {
 - (void)afterPerformFailWithResponse:(SKTURLResponse *)response;
 
 - (NSDictionary *)reformParams:(NSDictionary *)params;
+- (void)cleanData;
 @end

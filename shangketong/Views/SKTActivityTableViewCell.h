@@ -12,4 +12,5 @@
 
 @interface SKTActivityTableViewCell : SWTableViewCell
 
+- (void)configWithDictionary:(NSDictionary *)dict;
 @end
