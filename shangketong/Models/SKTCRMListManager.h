@@ -21,5 +21,6 @@ typedef NS_ENUM(NSUInteger, SKTCRMListManagerType) {
 @property (nonatomic, assign) SKTCRMListManagerType listManagerType;
 @property (nonatomic, assign) NSInteger nextPageNumber;
 
+- (void)loadFirstPage;
 - (void)loadNextPage;
 @end

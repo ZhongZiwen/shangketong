@@ -20,6 +20,12 @@
 }
 
 #pragma mark - Public method
+- (void)loadFirstPage {
+    _nextPageNumber = 1;
+
+    [self loadData];
+}
+
 - (void)loadNextPage {
     if (self.isLoading) {
         return;
